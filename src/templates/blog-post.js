@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}>
-          <link rel="canonical" href={`${post.fields.slug}`} /> // ⚡ Add canonical
+          <link rel="canonical" href={`${post.fields.slug}`} /> 
         </Helmet>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
