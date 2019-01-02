@@ -18,9 +18,8 @@ class BlogPostTemplate extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-          link={{href:`https://clever-hermann-954a98.netlify.com/`, rel: "canonical"}}>
-
+          title={`${post.frontmatter.title} | ${siteTitle}`}>
+          <link rel="canonical" href={`${post.fields.slug}`} /> 
         </Helmet>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
